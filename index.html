@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">Virtual Assistant</div>
-        <div class="info">Click the button below and ask for real-time updates like route, weather, or nearby locations.</div>
-        <button class="button" id="talk-to-assis">Talk to Assistant</button>
-        <div class="assistant-output" id="output"></div>
-        <ul class="suggestions" id="suggestions">
-            <li><strong>Tip:</strong> Try saying "What's the weather like today?"</li>
-            <li><strong>Tip:</strong> Ask "Find the nearest gas station."</li>
-            <li><strong>Tip:</strong> Request "Give me traffic updates."</li>
-        </ul>
+    <div class="main-container">
+        <div class="header">
+            <h1 class="logo">Virtual Assistant</h1>
+            <p class="info">Real-time updates at your fingertips: weather, routes, and more!</p>
+        </div>
+        
+        <div class="content">
+            <button class="button" id="talk-to-assis">Talk to Assistant</button>
+            <div class="assistant-output" id="output"></div>
+        </div>
+
+        <div class="tips-container">
+            <h3>Suggested Questions:</h3>
+            <ul class="suggestions" id="suggestions">
+                <li><strong>Tip:</strong> Ask "What's the weather like today?"</li>
+                <li><strong>Tip:</strong> Try "Find the nearest gas station."</li>
+                <li><strong>Tip:</strong> Request "Give me traffic updates."</li>
+            </ul>
+        </div>
     </div>
 
-<script src="./Var_Let_Const.js"></script>
+    <script src="./Var_Let_Const.js"></script>
 </body>
 </html>
