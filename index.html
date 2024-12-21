@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Assistant</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+
+        <button class="open-btn" id="menu-toggle">&#9776; All command</button>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" id="close-btn">&times;</a>
+
+        </div>
+    </header>
     <div class="main-container">
         <div class="header">
             <h1 class="logo">Virtual Assistant</h1>
             <p class="info">Real-time updates at your fingertips: weather, routes, and more!</p>
         </div>
-        
+
         <div class="content">
             <button class="button" id="talk-to-assis">Talk to Assistant</button>
             <div class="assistant-output" id="output"></div>
@@ -21,13 +32,16 @@
         <div class="tips-container">
             <h3>Suggested Questions:</h3>
             <ul class="suggestions" id="suggestions">
-                <li><strong>Tip:</strong> Ask "What's the weather like today?"</li>
-                <li><strong>Tip:</strong> Try "Find the nearest gas station."</li>
-                <li><strong>Tip:</strong> Request "Give me traffic updates."</li>
+                <li><strong>Tip:</strong> Try saying "what is the weather?"</li>
+                <li><strong>Tip:</strong> Ask "search on google [your subject]"</li>
+                <li><strong>Tip:</strong> Request "what time is it?"</li>
+                <li><strong>Tip:</strong> Request "Play music!"</li>
             </ul>
         </div>
+
     </div>
 
     <script src="./Var_Let_Const.js"></script>
 </body>
+
 </html>

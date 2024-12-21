@@ -1,3 +1,86 @@
+const allCommand = [
+    "hello",
+    "hi",
+    "hey",
+    "who are you",
+    "good morning",
+    "good afternoon",
+    "good evening",
+    "goodbye",
+    "bye",
+    "open youtube",
+    "open google",
+    "open facebook",
+    "open twitter",
+    "open instagram",
+    "open linkedin",
+    "open gmail",
+    "open email",
+    "play music",
+    "play song",
+    "what is the weather",
+    "weather",
+    "what time is it",
+    "time",
+    "open notepad",
+    "open calculator",
+    "search on google [your subject]",
+    "tell me a joke",
+    "tell a joke",
+    "what is [your query]",
+    "calculate [your equation]",
+    "set an alarm",
+    "latest news",
+    "open wikipedia",
+    "open amazon",
+    "open netflix",
+    "how are you",
+    "tell me something interesting",
+    "what is your name",
+    "what's your name",
+    "open settings",
+    "close tab",
+    "open my documents",
+    "shutdown",
+    "restart"
+];
+
+const sidebar = document.getElementById("mySidebar");
+const openBtn = document.getElementById("menu-toggle");
+const closeBtn = document.getElementById("close-btn");
+
+openBtn.addEventListener("click", function() {
+    sidebar.style.width = "250px";
+    openBtn.style.display = "none"
+});
+
+closeBtn.addEventListener("click", function() {
+    sidebar.style.width = "0";
+    openBtn.style.display = ""
+});
+
+
+
+let commandList = document.getElementById("mySidebar");
+
+
+
+for (let i = 0; i < allCommand.length; i++) {
+    let commandItem = document.createElement("li");
+    
+    commandItem.textContent = i + ": " + allCommand[i];
+    
+    commandItem.addEventListener("click", () => {
+        let commandData = commandItem.textContent;
+
+        takeCommand(commandData); 
+    });
+
+    commandList.appendChild(commandItem);
+}
+
+
+
 let yourTalk = document.getElementById('output');
 
 function speak(text) {
@@ -181,7 +264,7 @@ const takeCommand = (command) => {
     }
 
     else if(command.includes('open my documents')) {
-        window.open("file:///C:/Users/YourUsername/Documents");
+        window.open("https://workspace.google.com/products/docs");
     }
 
 

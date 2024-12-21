@@ -14,6 +14,62 @@ body {
     color: #fff;
 }
 
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #007BFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+    
+}
+
+.sidebar li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    margin-left: 50px;
+    color: white;
+}
+
+.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+.open-btn:hover {
+    background-color: #0056b3;
+}
+
 .main-container {
     background-color: #fff;
     max-width: 480px;
@@ -95,6 +151,7 @@ body {
 .suggestions {
     list-style: none;
     padding: 0;
+    height: 200px;
 }
 
 .suggestions li {
@@ -111,6 +168,10 @@ body {
 
 
 @media (max-width: 768px) {
+    .open-btn {
+        display: none;
+    }
+
     .main-container {
         padding: 30px;
     }
@@ -144,6 +205,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
