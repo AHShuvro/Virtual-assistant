@@ -1,4 +1,4 @@
-let yourTalk = document.getElementById('your-talk');
+let yourTalk = document.getElementById('output');
 
 function speak(text) {
     const textToSpeak = new SpeechSynthesisUtterance(text);
@@ -8,6 +8,7 @@ function speak(text) {
     textToSpeak.pitch = 1;
     textToSpeak.volume = 1;
     window.speechSynthesis.speak(textToSpeak);
+    yourTalk.innerHTML = text;
 }
 
 const wishMe = () => {
@@ -34,9 +35,7 @@ let recognition = new speechRecognition();
 recognition.onresult = (e) => {
     let assisCurrentIndex = e.resultIndex;
     let transcript = e.results[0][0].transcript;
-    console.log(e);
 
-    yourTalk.innerHTML = transcript;
     takeCommand(transcript);
 }
 
@@ -170,7 +169,7 @@ const takeCommand = (command) => {
     else if(command.includes('tell me something interesting')) {
         speak("Did you know? Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still safe to eat.");
     }
-    else if(command.includes('what is your name')) {
+    else if(command.includes('what is your name') || command.includes(`what's your name`)) {
         speak("I am a virtual assistant, created by Shuvro.");
     }
     else if(command.includes('open settings')) {
